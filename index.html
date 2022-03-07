@@ -15,6 +15,76 @@
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+    
+
+
+    <header>
+        <h1>Manipulação do DOM</h1>
+    </header>
+
+    <section>
+        <h1>O que é DOM?</h1>
+        <p>O Document Object Model (DOM) é uma interface de programação para documentos da web. Ele representa a página para que os programas possam alterar a estrutura, 
+            o estilo e o conteúdo do documento. O DOM representa o documento com nós e objetos; dessa forma, as linguagens de programação podem interagir com a página.(ref: developer.mozilla).
+            A árvore DOM e a forma com <br> que esse conteúdos se organizam de forma hierarquica.</p>
+        <img src="imagens/arvoredom.jpeg">   
+
+    </section>
+
+
+    <section>
+        <h1>O que são os objetos <i>window</i> e <i>document</i>?</h1>
+        <p>O objeto <i>window</i> representa uma janela que contém um elemento DOM; a propriedade <i>document</i> aponta para o documento DOM 
+            que será carregado naquela janela. A Interface <i>document</i>representa qualquer página da web carregada no navegador e serve como ponto de entrada para o conteúdo da página da web, 
+            que é a árvore DOM. O objeto <i>window</i> está um nível acima da árvore do DOM, sendo nela carregada o conteúdo.</p>
+    </section>
+
+
+    <section>
+        <h1>Diferença de <i>getElementById, getElementsByClassName, querySelector, querySelectorAll:</i></h1>
+        <p><i>Document.getElementById()</i>: Retorna a referência do elemento através do seu ID.</p>
+        <p><i>Document.getElementsByClassName()</i>:Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada.</p>
+        <p><i>Document.querySelectorAll()</i>: Retorna uma lista de elementos presentes no documento (usando ordenação pré-ordenada e transversal dos nós)
+            que coincidam com o grupo de seletores especificado. O objeto retornado é uma <i>NodeList</i>.</p>
+        <p><i>Document.querySelector()</i>: Retorna o primeiro elemento dentro do documento (usando ordenação pré-ordenada e transversal dos nós)
+            que coincidam com o grupo de seletores especificado.</p>
+        <img class="getby" src="imagens/getby.jpeg">
+    </section>
+
+
+    <section>
+        <h1>O que é um Element no JavaScript?</h1>
+        <p>Um <i>Element</i> é a classe base mais geral da qual todos os objetos em um Document herda, tendo métodos e propriedades em comuns para todos os tipos de elementos.
+            A interface <i>HTMLElement</i> é a interface base para elementos HTML.</p>
+    </section>
+
+
+    <section>
+        <h1>Diferença de innerHTML, innerText e textContent:</h1>
+        <p>Utilizado na manipulação do DOM, o <b>innerHTML</b> retorna todo o texto e o html que existem no elemento. Ele retorna todo o html existente, retornando também às tags, e não somente o texto. </p>
+        <p>Já o <b>innerText</b> retorna apenas o texto. Ele ignora todas as tags HTML que estão dentro do elemento, mas ainda assim, “entende” o css do elemento, retornando apenas textos visíveis. Utiliza-se quando queremos buscar apenas o texto visível disponível no elemento.</p>
+        <p>O <b>textContent</b> funciona de forma muito semelhante ao innerText, porém, retornando todo o conteúdo de texto, incluindo o texto oculto pelo css, bem como as quebras de linha (\n). Utilizamos o textContent quando queremos buscar todo o texto disponível no elemento.</p>
+        <img class="innerHtml" src = "imagens/innertext-and-innerhtml.gif">
+    </section>
+
+
+    <section>
+        <h1>Qual a diferença entre uma NodeList e uma array comum? Como transformar a NodeList em uma array</h1>
+        <p><i>Nodelist:</i> Objetos <i>NodeList</i> são uma lista de objetos, retornados pelos métodos document.querySelectorAll()e também no uso de APIs</p>
+        <p><i>Array:</i> O objeto <i>NodeList</i> é um objeto global usado na construção de 'arrays': objetos de alto nível semelhantes a listas.</p>
+        <p>Podemos transformar uma <i>nodeList</i> em um <i>array</i> comum usando o <i>for</i> ou <i>forEach</i></p>
+        <img class="nodelist" src="imagens/nodelist.png">
+        <img class="nodeemarray" src="imagens/nodeemarray.jpeg">
+        <p class="foreach"><i>functionX.forEach(i => console.log(i))</i></p>
+    </section>
+
+
+    <section>
+        <h1>Como criar elementos via JavaScript com document.createElement e element.appendChild</h1>
+        <p>FALTA VOCÊ</p>
+    </section>
+
+    <h1 class="tituloteste">Teste usando as funcionalidades explicadas; mudando o borderRadius das caixas abaixo:</h1>
     <div class="exemplo">
         <div class="item" id="item-1">
             <h1>caixa 1</h1> 
@@ -27,66 +97,19 @@
         </div>
     </div>
 
-    <input placeholder="teste" id="input-1" type="number"></input>
-    <button onclick="alterarRadius()">teste</button>
+    <input placeholder="teste: borderRadius" id="input-1" type="number"></input>
+    <button onclick="alterarRadius()">mudar</button>
 
-
-    <header>
-        <h1>Manipulação do DOM</h1>
-    </header>
-
+    <h1 class="titulofashion">Mostrando as funcionalidades apresentadas através do projeto <i>Fashion Driven</i></h1>
+    <h ref = ""></h>
     <section>
-        <h1>O que é DOM?</h1>
-        <p>teste</p>
-
-    </section>
-
-
-    <section>
-        <h1>O que são os objetos <i>window</i> e <i>document</i>?</h1>
-        <p>teste</p>
-    </section>
-
-
-    <section>
-        <h1>Diferença de <i>getElementById, getElementsByClassName, querySelector, querySelectorAll</i></h1>
-        <p>teste</p>
-    </section>
-
-
-    <section>
-        <h1>O que é um Element no JavaScript?</h1>
-        <p>teste</p>
-    </section>
-
-
-    <section>
-        <h1>Diferença de innerHTML, innerText e textContent</h1>
-        <p>teste</p>
-    </section>
-
-
-    <section>
-        <h1>Qual a diferença entre uma NodeList e uma array comum? Como transformar a NodeList em uma array</h1>
-
-        <p>teste</p>
-    </section>
-
-
-    <section>
-        <h1>Como criar elementos via JavaScript com document.createElement e element.appendChild</h1>
-        <p>teste</p>
+        <img class = "" src="">
+        <img class = "" src="">
+        <img class = "" src="">
+        <img class = "" src="">
     </section>
 
     
-
-
-    
-    
-    
-
-
-
     <script src="script.js"></script>
 </body>
 </html>
